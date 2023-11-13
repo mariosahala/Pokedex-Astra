@@ -1,11 +1,19 @@
 package com.astra.mario.feature.list_pokemon
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.astra.mario.core.base.BaseFragment
+import com.astra.mario.core.di.PokemonDaggerWrapper
 import com.astra.mario.databinding.FragmentListPokemonBinding
 
 class ListPokemonFragment : BaseFragment<FragmentListPokemonBinding>() {
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+        PokemonDaggerWrapper.getComponent().inject(this@ListPokemonFragment)
+    }
+
     override fun setViewBinding(
         inflater: LayoutInflater,
         container: ViewGroup?
