@@ -1,6 +1,5 @@
 package com.astra.mario.core.base
 
-
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
