@@ -19,11 +19,12 @@ class PokemonViewModel @Inject constructor(private val repository: PokemonReposi
         MutableLiveData<ApiState<ListPokemonResponse>>()
     val listPokemonResult: LiveData<ApiState<ListPokemonResponse>> =
         _listPokemonResult
-
     private val _detailPokemonResult =
         MutableLiveData<ApiState<DetailPokemonResponse>>()
     val detailPokemonResult: LiveData<ApiState<DetailPokemonResponse>> =
         _detailPokemonResult
+    var listPokemon: ArrayList<ListPokemonResponse.Result> = arrayListOf()
+
 
     fun getListPokemon() {
         viewModelScope.launch(Dispatchers.IO) {

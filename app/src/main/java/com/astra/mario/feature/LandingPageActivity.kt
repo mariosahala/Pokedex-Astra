@@ -12,5 +12,10 @@ class LandingPageActivity : BaseActivity<ActivityLandingPageBinding>() {
         ActivityLandingPageBinding.inflate(layoutInflater)
 
     override fun setUpVariable() {
+        binding.apply {
+            btnStartPokemon.setOnClickListener {
+                MainActivity.toActivity(this@LandingPageActivity)
+            }
+        }
     }
 }

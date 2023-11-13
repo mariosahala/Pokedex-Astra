@@ -1,5 +1,7 @@
 package com.astra.mario.feature
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import com.astra.mario.core.base.BaseActivity
 import com.astra.mario.core.di.PokemonDaggerWrapper
@@ -17,6 +19,13 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     override fun setUpVariable() {
         binding.apply {
 
+        }
+    }
+
+    companion object {
+        fun toActivity(activity: Activity) {
+            val intent = Intent(activity, MainActivity::class.java)
+            activity.startActivity(intent)
         }
     }
 
